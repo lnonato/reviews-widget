@@ -110,7 +110,7 @@ async function fetchPlaceData() {
           extraPhotosHtml += `
             <div class="photo-item-rw">
               <img src="${photoObj.url}" alt="Foto extra" class="review-photo extra">
-              <div class="photo-author">
+              <div class="photo-author-rw">
                 ${photoObj.authorPhoto ? `<img src="${photoObj.authorPhoto}" alt="${photoObj.author}" class="photo-author-img">` : ''}
                 <span class="photo-author-name">${photoObj.author}</span>
               </div>
