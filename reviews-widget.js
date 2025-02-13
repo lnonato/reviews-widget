@@ -131,3 +131,15 @@ async function fetchPlaceData() {
 }
 
 window.addEventListener('load', fetchPlaceData);
+
+
+window.addEventListener('load', fetchPlaceData);
+
+document.addEventListener('DOMContentLoaded', function() {
+  var container = document.getElementById('reviews-widget-container');
+  if (container) {
+    container.addEventListener('click', function() {
+      window.open('https://g.page/r/CXjrlG0s7WOKEAI/', '_blank');
+    });
+  }
+});
