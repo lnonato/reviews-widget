@@ -1,0 +1,139 @@
+/* reviews-widget.css */
+
+/* Contêiner principal clicável */
+#reviews-widget-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff; /* fundo branco */
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+/* Avaliações */
+.google-reviews {
+  width: 100%;
+}
+.review {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  background-color: #fff;
+}
+.review:last-child {
+  border-bottom: none;
+}
+.review-header {
+  display: flex;
+  align-items: center;
+}
+/* Contêiner do avatar: circular para não cortar detalhes */
+.review-author-photo-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: visible;
+  margin-right: 10px;
+  display: inline-block;
+}
+.review-author-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  display: block;
+}
+.review-author-name {
+  font-weight: bold;
+  margin-right: 10px;
+}
+.review-rating {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.star {
+  font-size: 1.1em;
+  margin-right: 2px;
+}
+.star.full {
+  color: #f39c12;
+}
+.star.empty {
+  color: #ddd;
+}
+.review-rating-value {
+  font-size: 0.9em;
+  color: #555;
+  margin-left: 5px;
+}
+.review-body {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.review-text {
+  margin: 0;
+}
+.review-footer {
+  color: #999;
+  font-size: 0.8em;
+}
+/* Fotos vinculadas à avaliação */
+.review-photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+}
+.review-photos .review-photo {
+  width: 180px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  object-fit: cover;
+}
+/* Extra fotos */
+.extra-photos {
+  margin-top: 20px;
+}
+.extra-photos h4 {
+  margin-bottom: 10px;
+  font-size: 1em;
+  text-align: center;
+}
+.google-photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.photo-item {
+  position: relative;
+  width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.google-photos .review-photo.extra {
+  width: 100%;
+  display: block;
+}
+/* Overlay para foto extra com dados do autor */
+.photo-author {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+}
+.photo-author-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-right: 6px;
+  object-fit: cover;
+}
+.photo-author-name {
+  font-size: 0.9em;
+}
