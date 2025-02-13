@@ -5,22 +5,22 @@ body #reviews-widget-container-rw {
   max-width: 600px !important;
   margin: 20px auto !important;
   padding: 10px !important;
-  border: 1px solid #ddd;
+  border: 1px solid #ddd !important;
   background-color: #fff; /* fundo branco */
   font-family: Arial, sans-serif;
   cursor: pointer;
 }
 /* Avaliações */
 .google-reviews-rw {
-  width: 100%;
+  width: 100% !important;
 }
 .review-rw {
-  border-bottom: 1px solid #ddd;
-  padding: 15px 0;
+  border-bottom: 1px solid #ddd !important;
+  padding: 15px 0 !important;
   background-color: #fff;
 }
 .review-rw:last-child {
-  border-bottom: none;
+  border-bottom: none !important;
 }
 .review-header-rw {
   display: flex;
@@ -28,27 +28,27 @@ body #reviews-widget-container-rw {
 }
 /* Contêiner do avatar: circular para não cortar detalhes */
 .review-author-photo-container {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
   overflow: visible;
-  margin-right: 10px;
+  margin-right: 10px !important;
   display: inline-block;
 }
 .review-author-photo {
-  width: 40px;
-  height: 40px;
-  border-radius: 0;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 0 !important;
   display: block;
 }
 .review-author-name {
-  font-weight: bold;
-  margin-right: 10px;
+  font-weight: bold !important;
+  margin-right: 10px !important;
 }
 .review-rating-rw {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
+  display: flex !important;
+  align-items: center !important;
+  margin-left: auto !important;
 }
 .star-rw {
   font-size: 1.1em;
@@ -80,21 +80,21 @@ body #reviews-widget-container-rw {
 .review-photos-rw {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
-  margin-top: 10px;
+  gap: 5px !important;
+  margin-top: 10px !important;
 }
 .review-photos-rw .review-photo-rw {
-  width: 180px;
+  width: 180px !important;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 4px !important;
   object-fit: cover;
 }
 /* Extra fotos */
 .extra-photos-rw {
-  margin-top: 20px;
+  margin-top: 20px !important;
 }
 .extra-photos-rw h4 {
-  margin-bottom: 10px;
+  margin-bottom: 10px !important;
   font-size: 1em;
   text-align: center;
 }
@@ -105,33 +105,33 @@ body #reviews-widget-container-rw {
   justify-content: center;
 }
 .photo-item-rw {
-  position: relative;
-  width: 220px;
+  position: relative !important;
+  width: 220px !important;
   border: 1px solid #ccc;
   border-radius: 4px;
   overflow: hidden;
 }
 .google-photos-rw .review-photo-rw.extra {
-  width: 100%;
-  display: block;
+  width: 100% !important;
+  display: block !important;
 }
 /* Overlay para foto extra com dados do autor */
 .photo-author-rw {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
   background: rgba(0,0,0,0.6);
   color: #fff;
-  padding: 4px;
-  display: flex;
+  padding: 4px !important;
+  display: flex !important;
   align-items: center;
 }
 .photo-author-img {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  margin-right: 6px;
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50% !important;
+  margin-right: 6px !important;
   object-fit: cover;
 }
 .photo-author-name {
