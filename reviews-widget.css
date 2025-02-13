@@ -6,9 +6,9 @@ body #reviews-widget-container-rw {
   margin: 20px auto !important;
   padding: 10px !important;
   border: 1px solid #ddd !important;
-  background-color: #fff; /* fundo branco */
-  font-family: Arial, sans-serif;
-  cursor: pointer;
+  background-color: #fff !important; /* fundo branco */
+  font-family: Arial, sans-serif !important;
+  cursor: pointer !important;
 }
 /* Avaliações */
 .google-reviews-rw {
@@ -17,29 +17,29 @@ body #reviews-widget-container-rw {
 .review-rw {
   border-bottom: 1px solid #ddd !important;
   padding: 15px 0 !important;
-  background-color: #fff;
+  background-color: #fff !important;
 }
 .review-rw:last-child {
   border-bottom: none !important;
 }
 .review-header-rw {
-  display: flex;
-  align-items: center;
+  display: flex !important;
+  align-items: center !important;
 }
 /* Contêiner do avatar: circular para não cortar detalhes */
 .review-author-photo-container {
   width: 40px !important;
   height: 40px !important;
   border-radius: 50% !important;
-  overflow: visible;
+  overflow: visible !important;
   margin-right: 10px !important;
-  display: inline-block;
+  display: inline-block !important;
 }
 .review-author-photo {
   width: 40px !important;
   height: 40px !important;
   border-radius: 0 !important;
-  display: block;
+  display: block !important;
 }
 .review-author-name {
   font-weight: bold !important;
@@ -51,43 +51,43 @@ body #reviews-widget-container-rw {
   margin-left: auto !important;
 }
 .star-rw {
-  font-size: 1.1em;
-  margin-right: 2px;
+  font-size: 1.1em !important;
+  margin-right: 2px !important;
 }
 .star-rw.full {
-  color: #f39c12;
+  color: #f39c12 !important;
 }
 .star-rw.empty {
-  color: #ddd;
+  color: #ddd !important;
 }
 .review-rating-value {
-  font-size: 0.9em;
-  color: #555;
-  margin-left: 5px;
+  font-size: 0.9em !important;
+  color: #555 !important;
+  margin-left: 5px !important;
 }
 .review-body-rw {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
 }
 .review-text-rw {
-  margin: 0;
+  margin: 0 !important;
 }
 .review-footer-rw {
-  color: #999;
-  font-size: 0.8em;
+  color: #999 !important;
+  font-size: 0.8em !important;
 }
 /* Fotos vinculadas à avaliação */
 .review-photos-rw {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex !important;
+  flex-wrap: wrap !important;
   gap: 5px !important;
   margin-top: 10px !important;
 }
 .review-photos-rw .review-photo-rw {
   width: 180px !important;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc !important;
   border-radius: 4px !important;
-  object-fit: cover;
+  object-fit: cover !important;
 }
 /* Extra fotos */
 .extra-photos-rw {
@@ -95,21 +95,21 @@ body #reviews-widget-container-rw {
 }
 .extra-photos-rw h4 {
   margin-bottom: 10px !important;
-  font-size: 1em;
-  text-align: center;
+  font-size: 1em !important;
+  text-align: center !important;
 }
 .google-photos-rw {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  justify-content: center !important;
 }
 .photo-item-rw {
   position: relative !important;
   width: 220px !important;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  overflow: hidden;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  overflow: hidden !important;
 }
 .google-photos-rw .review-photo-rw.extra {
   width: 100% !important;
@@ -121,19 +121,19 @@ body #reviews-widget-container-rw {
   bottom: 0 !important;
   left: 0 !important;
   width: 100% !important;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.6) !important;
   color: #fff;
   padding: 4px !important;
   display: flex !important;
-  align-items: center;
+  align-items: center !important;
 }
 .photo-author-img {
   width: 28px !important;
   height: 28px !important;
   border-radius: 50% !important;
   margin-right: 6px !important;
-  object-fit: cover;
+  object-fit: cover !important;
 }
 .photo-author-name {
-  font-size: 0.9em;
+  font-size: 0.9em !important;
 }
