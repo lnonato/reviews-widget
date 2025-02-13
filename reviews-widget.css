@@ -1,10 +1,10 @@
 /* reviews-widget.css */
 
 /* Contêiner principal clicável */
-#reviews-widget-container-rw {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 10px;
+body #reviews-widget-container-rw {
+  max-width: 600px !important;
+  margin: 20px auto !important;
+  padding: 10px !important;
   border: 1px solid #ddd;
   background-color: #fff; /* fundo branco */
   font-family: Arial, sans-serif;
