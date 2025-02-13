@@ -1,5 +1,8 @@
 /* reviews-widget.css */
-
+#reviews-widget-container-rw p,
+#reviews-widget-container-rw div {
+  margin: 0 !important;
+}
 /* Contêiner principal clicável */
 body #reviews-widget-container-rw {
   max-width: 600px !important;
