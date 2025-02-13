@@ -39,7 +39,7 @@ async function fetchPlaceData() {
     }
 
     // Processa as avaliações (reviews)
-    let reviewsHtml = '<div class="google-reviews">';
+    let reviewsHtml = '<div class="google-reviews-rw">';
     if (data.reviews && data.reviews.length > 0) {
       data.reviews.forEach(review => {
         const authorName = (review.authorAttribution && review.authorAttribution.displayName)
@@ -53,10 +53,10 @@ async function fetchPlaceData() {
         const emptyStars = 5 - fullStars;
         let starsHtml = '';
         for (let i = 0; i < fullStars; i++) {
-          starsHtml += '<span class="star full">&#9733;</span>';
+          starsHtml += '<span class="star-rw full">&#9733;</span>';
         }
         for (let i = 0; i < emptyStars; i++) {
-          starsHtml += '<span class="star empty">&#9733;</span>';
+          starsHtml += '<span class="star-rw empty">&#9733;</span>';
         }
         const reviewText = (review.text && review.text.text) ? review.text.text : '';
         const reviewTime = review.relativePublishTimeDescription ? review.relativePublishTimeDescription : '';
@@ -65,9 +65,9 @@ async function fetchPlaceData() {
         let reviewPhotosHtml = '';
         let normReviewAuthor = authorName.trim().toLowerCase();
         if (photosByAuthor[normReviewAuthor] && photosByAuthor[normReviewAuthor].length > 0) {
-          reviewPhotosHtml = '<div class="review-photos">';
+          reviewPhotosHtml = '<div class="review-photos-rw">';
           photosByAuthor[normReviewAuthor].forEach(photoObj => {
-            reviewPhotosHtml += `<img src="${photoObj.url}" alt="Foto do autor" class="review-photo">`;
+            reviewPhotosHtml += `<img src="${photoObj.url}" alt="Foto do autor" class="review-photo-rw">`;
           });
           reviewPhotosHtml += '</div>';
           // Remove as fotos vinculadas para que as restantes sejam tratadas como extra
@@ -75,21 +75,21 @@ async function fetchPlaceData() {
         }
 
         reviewsHtml += `
-          <div class="review">
-            <div class="review-header">
+          <div class="review-rw">
+            <div class="review-header-rw">
               ${authorPhoto ? `
                 <div class="review-author-photo-container">
                   <img class="review-author-photo" src="${authorPhoto}" alt="${authorName}">
                 </div>
               ` : ''}
               <span class="review-author-name">${authorName}</span>
-              <span class="review-rating">${starsHtml} <span class="review-rating-value">${review.rating}</span></span>
+              <span class="review-rating-rw">${starsHtml} <span class="review-rating-value">${review.rating}</span></span>
             </div>
-            <div class="review-body">
-              <p class="review-text">${reviewText}</p>
+            <div class="review-body-rw">
+              <p class="review-text-rw">${reviewText}</p>
               ${reviewPhotosHtml}
             </div>
-            <div class="review-footer">
+            <div class="review-footer-rw">
               <small class="review-date">${reviewTime}</small>
             </div>
           </div>
@@ -99,16 +99,16 @@ async function fetchPlaceData() {
       reviewsHtml += '<p>Nenhuma avaliação encontrada.</p>';
     }
     reviewsHtml += '</div>';
-    document.getElementById('reviews-container').innerHTML = reviewsHtml;
+    document.getElementById('reviews-container-rw').innerHTML = reviewsHtml;
 
     // Exibe as fotos restantes (extra) que não estão vinculadas a nenhuma avaliação
-    let extraPhotosHtml = '<div class="extra-photos"><h4>Mais fotos</h4><div class="google-photos">';
+    let extraPhotosHtml = '<div class="extra-photos-rw"><h4>Mais fotos</h4><div class="google-photos-rw">';
     let extraFound = false;
     for (const author in photosByAuthor) {
       if (photosByAuthor.hasOwnProperty(author)) {
         photosByAuthor[author].forEach(photoObj => {
           extraPhotosHtml += `
-            <div class="photo-item">
+            <div class="photo-item-rw">
               <img src="${photoObj.url}" alt="Foto extra" class="review-photo extra">
               <div class="photo-author">
                 ${photoObj.authorPhoto ? `<img src="${photoObj.authorPhoto}" alt="${photoObj.author}" class="photo-author-img">` : ''}
@@ -121,22 +121,19 @@ async function fetchPlaceData() {
       }
     }
     extraPhotosHtml += '</div></div>';
-    document.getElementById('extra-photos-container').innerHTML = extraFound ? extraPhotosHtml : '';
+    document.getElementById('extra-photos-container-rw').innerHTML = extraFound ? extraPhotosHtml : '';
     
   } catch (error) {
     console.error('Erro ao buscar os dados do local:', error);
-    document.getElementById('reviews-container').innerHTML = '<p>Erro ao carregar as avaliações.</p>';
-    document.getElementById('extra-photos-container').innerHTML = '<p>Erro ao carregar as fotos.</p>';
+    document.getElementById('reviews-container-rw').innerHTML = '<p>Erro ao carregar as avaliações.</p>';
+    document.getElementById('extra-photos-container-rw').innerHTML = '<p>Erro ao carregar as fotos.</p>';
   }
 }
 
 window.addEventListener('load', fetchPlaceData);
 
-
-window.addEventListener('load', fetchPlaceData);
-
 document.addEventListener('DOMContentLoaded', function() {
-  var container = document.getElementById('reviews-widget-container');
+  var container = document.getElementById('reviews-widget-container-rw');
   if (container) {
     container.addEventListener('click', function() {
       window.open('https://g.page/r/CXjrlG0s7WOKEAI/', '_blank');
