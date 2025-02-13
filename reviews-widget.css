@@ -1,7 +1,7 @@
 /* reviews-widget.css */
 
 /* Contêiner principal clicável */
-#reviews-widget-container {
+#reviews-widget-container-rw {
   max-width: 600px;
   margin: 20px auto;
   padding: 10px;
@@ -11,18 +11,18 @@
   cursor: pointer;
 }
 /* Avaliações */
-.google-reviews {
+.google-reviews-rw {
   width: 100%;
 }
-.review {
+.review-rw {
   border-bottom: 1px solid #ddd;
   padding: 15px 0;
   background-color: #fff;
 }
-.review:last-child {
+.review-rw:last-child {
   border-bottom: none;
 }
-.review-header {
+.review-header-rw {
   display: flex;
   align-items: center;
 }
@@ -45,19 +45,19 @@
   font-weight: bold;
   margin-right: 10px;
 }
-.review-rating {
+.review-rating-rw {
   display: flex;
   align-items: center;
   margin-left: auto;
 }
-.star {
+.star-rw {
   font-size: 1.1em;
   margin-right: 2px;
 }
-.star.full {
+.star-rw.full {
   color: #f39c12;
 }
-.star.empty {
+.star-rw.empty {
   color: #ddd;
 }
 .review-rating-value {
@@ -65,58 +65,58 @@
   color: #555;
   margin-left: 5px;
 }
-.review-body {
+.review-body-rw {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.review-text {
+.review-text-rw {
   margin: 0;
 }
-.review-footer {
+.review-footer-rw {
   color: #999;
   font-size: 0.8em;
 }
 /* Fotos vinculadas à avaliação */
-.review-photos {
+.review-photos-rw {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
   margin-top: 10px;
 }
-.review-photos .review-photo {
+.review-photos-rw .review-photo-rw {
   width: 180px;
   border: 1px solid #ccc;
   border-radius: 4px;
   object-fit: cover;
 }
 /* Extra fotos */
-.extra-photos {
+.extra-photos-rw {
   margin-top: 20px;
 }
-.extra-photos h4 {
+.extra-photos-rw h4 {
   margin-bottom: 10px;
   font-size: 1em;
   text-align: center;
 }
-.google-photos {
+.google-photos-rw {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
 }
-.photo-item {
+.photo-item-rw {
   position: relative;
   width: 220px;
   border: 1px solid #ccc;
   border-radius: 4px;
   overflow: hidden;
 }
-.google-photos .review-photo.extra {
+.google-photos-rw .review-photo-rw.extra {
   width: 100%;
   display: block;
 }
 /* Overlay para foto extra com dados do autor */
-.photo-author {
+.photo-author-rw {
   position: absolute;
   bottom: 0;
   left: 0;
