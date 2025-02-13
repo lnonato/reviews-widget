@@ -1,8 +1,26 @@
-/* reviews-widget.css */
+/* Remove o reset global somente dentro do widget (se possível, remova o reset global se você puder controlar) */
 #reviews-widget-container-rw p,
 #reviews-widget-container-rw div {
   margin: 0 !important;
 }
+
+/* Reaplica espaçamentos desejados nos elementos do widget */
+#reviews-widget-container-rw .review-header-rw {
+  margin-bottom: 8px !important;
+}
+#reviews-widget-container-rw .review-author-name {
+  margin-left: 5px !important; /* Garante espaçamento à esquerda, se necessário */
+}
+#reviews-widget-container-rw .review-text-rw {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+/* Separa a área das fotos da avaliação */
+#reviews-widget-container-rw .review-photos-rw {
+  margin-top: 8px !important;
+}
+
 /* Contêiner principal clicável */
 body #reviews-widget-container-rw {
   max-width: 600px !important;
