@@ -1,7 +1,8 @@
-/* Remove o reset global somente dentro do widget (se possível, remova o reset global se você puder controlar) */
-#reviews-widget-container-rw p,
-#reviews-widget-container-rw div {
+/* Reset dos estilos apenas para o widget */
+#reviews-widget-container-rw * {
   margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
 }
 
 /* Reaplica espaçamentos desejados nos elementos do widget */
