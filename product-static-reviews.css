@@ -1,0 +1,78 @@
+/* product-static-reviews.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f5f5f5;
+}
+
+.product-description {
+  margin-bottom: 30px;
+}
+
+.reviews-container {
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+#product-static-reviews {
+  display: flex;
+  gap: 15px;
+}
+
+.static-review-item {
+  flex: 0 0 280px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.static-review-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.static-review-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: visible;
+}
+
+.static-review-name {
+  font-weight: bold;
+}
+
+.static-review-rating .static-review-star {
+  font-size: 25px;
+  color: #ddd;
+}
+
+.static-review-rating .static-review-star.filled {
+  color: #f39c12;
+}
+
+.static-review-text {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.review-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  margin-top: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.reviews-link {
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: inherit; /* Mantém as cores originais */
+}
