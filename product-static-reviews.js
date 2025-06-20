@@ -1,12 +1,8 @@
-// product-static-reviews.js (ATUALIZADO)
-
-async function loadStaticReviews() {
-  const reviewsJsonUrl = window.reviewConfig.reviewsJson;
-
-  const response = await fetch(reviewsJsonUrl);
+async function loadNsStaticReviews() {
+  const response = await fetch('https://lnonato.github.io/reviews-widget/reviews.json');
   const data = await response.json();
 
-  const container = document.getElementById('product-static-reviews');
+  const container = document.getElementById('ns-product-static-reviews');
 
   if (data.reviews && data.reviews.length > 0) {
     let html = '';
@@ -14,18 +10,18 @@ async function loadStaticReviews() {
     data.reviews.forEach(review => {
       let starsHtml = '';
       for (let i = 0; i < 5; i++) {
-        starsHtml += `<span class="static-review-star ${i < review.rating ? 'filled' : 'empty'}">&#9733;</span>`;
+        starsHtml += `<span class="${i < review.rating ? 'filled' : ''}">★</span>`;
       }
 
       html += `
-        <div class="static-review-item">
-          <div class="static-review-author">
-            <img src="${review.photo}" alt="${review.name}" class="static-review-photo">
-            <span class="static-review-name">${review.name}</span>
+        <div class="ns-review-card">
+          <div class="ns-review-author">
+            <img src="${review.photo}" alt="${review.name}" class="ns-author-photo">
+            <span class="ns-author-name">${review.name}</span>
           </div>
-          <div class="static-review-rating">${starsHtml}</div>
-          <div class="static-review-text">${review.text}</div>
-          ${review.image ? `<img src="${review.image}" alt="Imagem da Avaliação" class="review-image">` : ''}
+          <div class="ns-review-stars">${starsHtml}</div>
+          <div class="ns-review-text">${review.text}</div>
+          ${review.image ? `<img src="${review.image}" alt="Foto da avaliação" class="ns-review-image">` : ''}
         </div>
       `;
     });
@@ -36,4 +32,4 @@ async function loadStaticReviews() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', loadStaticReviews);
+document.addEventListener('DOMContentLoaded', loadNsStaticReviews);
